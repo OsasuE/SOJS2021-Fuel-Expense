@@ -20,7 +20,7 @@ function moneyFormatter(num) {
 export const Transaction = ({ transaction }) => {
   const { deleteTransaction } = useContext(GlobalContext);
 
-  const sign = 'Car:';
+  const sign = 'Car: ';
   const litrat = transaction.litres < 0 ? ' litres' : ' litres';
   const matka = transaction.distance < 0 ? ' km' : ' km';
   const hinta = transaction.price < 0 ? '€' : '€';
