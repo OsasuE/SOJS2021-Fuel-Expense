@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: #f7f7f7;
+  background-color: #d1ecfa;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,6 +27,7 @@ body {
 h1 {
   letter-spacing: 1px;
   margin: 0;
+  color: rgb(8, 65, 238);
 }
 
 h3 {
@@ -112,7 +113,7 @@ input[type='number'] {
 }
 
 .list li {
-  background-color: #fff;
+  background-color: rgb(250, 229, 229);
   box-shadow: var(--box-shadow);
   color: #333;
   display: flex;

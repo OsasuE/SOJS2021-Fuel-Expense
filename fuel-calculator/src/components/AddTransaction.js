@@ -30,21 +30,21 @@ export const AddTransaction = () => {
             <form onSubmit={onSubmit}>
                 <div className="form-control">
                     <label htmlFor="litres">Litres</label>
-                    <input type="number" value={litres} onChange={(e) => setLitres(e.target.value)} placeholder="Enter amount..." />
+                    <input type="number" required value={litres} onChange={(e) => setLitres(e.target.value)} placeholder="Enter amount..." />
                 </div>
                 <div className="form-control">
                     <label htmlFor="price">Price</label>
-                    <input type="number" value={price} onChange={(e) => setPrice(e.target.value)} placeholder="Enter price..." />
+                    <input type="number" required value={price} onChange={(e) => setPrice(e.target.value)} placeholder="Enter price..." />
                 </div>
                 <div className="form-control">
                     <label htmlFor="distance">Distance</label>
-                    <input type="number" value={distance} onChange={(e) => setDistance(e.target.value)} placeholder="Enter distance since last refuel..." />
+                    <input type="number" required value={distance} onChange={(e) => setDistance(e.target.value)} placeholder="Enter distance since last refuel..." />
                 </div>
                 <div className="form-control">
                     <label htmlFor="car">Car</label>
-                    <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Enter car..." />
+                    <input type="text" required value={text} onChange={(e) => setText(e.target.value)} placeholder="Enter car..." />
                 </div>
-                <button className="btn">Add transaction</button>
+                <button className="btn">Add Refuel</button>
             </form>
         </>
     )
