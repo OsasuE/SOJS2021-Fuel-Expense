@@ -4,7 +4,7 @@ import { GlobalContext } from '../context/GlobalState';
 
 export const Transaction = ({ transaction }) => {
   const { deleteTransaction } = useContext(GlobalContext);
-  const kulutus = (transaction.distance / transaction.price * 100).toFixed(2);
+  const kulutus = (transaction.distance / transaction.litres).toFixed(2);
   const kulut = (transaction.price / transaction.distance * 100).toFixed(2);
   const signCar = 'Car: ';
   const signConsumption = 'Avg: ' + kulutus + 'L/100km & ' + kulut + '€/100km';
