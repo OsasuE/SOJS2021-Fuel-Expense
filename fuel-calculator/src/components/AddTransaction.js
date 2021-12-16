@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react'
 import { GlobalContext } from '../context/GlobalState';
 
 export const AddTransaction = () => {
+//  Luodaan muuttujia, joilla saadaan selvitettyä tarvittavia tietoja.
     const [text, setText] = useState('');
     const [litres, setLitres] = useState(0);
     const [price, setPrice] = useState(0);
