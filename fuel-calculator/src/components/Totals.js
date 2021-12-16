@@ -2,29 +2,31 @@ import React, { useContext } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 
 
-export const Balance = () => {
+export const Totals = () => {
     const { transactions } = useContext(GlobalContext);
 
+//  Lasketaan kokonaiskilometrit
     const km = transactions.map(transaction => transaction.distance);
     const totalKm = km
     .filter(item => item > 0)
     .reduce((acc, item) => (acc += item),0)
     .toFixed(0);
 
-
+//  Lasketaan kokonaislitrat
     const fuel = transactions.map(transaction => transaction.litres);
     const totalFuel = fuel
     .filter(item => item > 0)
     .reduce((acc, item) => (acc += item),0)
     .toFixed(0);
 
-
+//  Lasketaan kokonaishinta
     const price = transactions.map(transaction => transaction.price);
     const totalPrice = price
     .filter(item => item > 0)
     .reduce((acc, item) => (acc += item),0)
     .toFixed(0);
 
+//  Laskutoimitukset keskihinnalle ja kulutukselle
     const avgConsumption = (totalFuel / totalKm * 100).toFixed(2);
     const avgCost = (totalPrice / totalKm * 100).toFixed(2);
 
